@@ -1,0 +1,25 @@
+Welcome to the MISMO industry Loan Application Dataset (iLAD)! 
+
+What is iLAD?
+iLAD is an industry standard for the exchange of loan application information, based on the MISMO v3.4 XML Reference Model:
+  - A companion to the redesigned GSE Uniform Residential Loan Application (URLA)—contains all the URLA data
+  - A replacement for the DU 1003 v3.2 Flat File, to be retired with the new URLA
+  - Includes ALL loan application and automated underwriting data
+  - Agnostic to investor and business process – supports DU and LPA equally—no one is disadvantaged
+  - A “superset” of application and underwriting data
+  - Extensible, versioned, and includes all extensions of the source files
+  - Will continue to evolve and grow
+
+How was iLAD created and what should I do with it?
+The iLAD specification is an integration of several existing industry specifications that are destined for future use in the mortage industry for underwriting and origination functions. iLAD is designed to grow over time with new versions, but as of version 1.0.0, included industry specifications include those for Desktop Underwriter, Loan Product Advisor, data mappings for the Uniform Residential Loan Application (URLA), and  the DU legacy version 3.2 flat file being retired by Fannie Mae.  As additional data is included in future versions of iLAD, this will be noted in Tab 4: Source Versioning Information.  Reference Index ID's for these source specifications are included in the iLAD so that you may link iLAD back to these specs and their detail, as well as your own analysis.  The entire file can be used for data exchange between trading partners, or you may use parts of the file to send to specific partners, using the conditionality and implementation requirements found in their specifications. 
+
+The iLAD specification itself was created through a rationalization of all of the underlying source specs, which were created and documented each in their own way. In order to create one universal view, some specs were flattened, others made more relational, to come to this universal view. This universal view attempts to provide what can be viewed in URLA/ULAD sort order, as well as XML sort order (albeit with business repetitions). With all of the native sort ID's, users may sort the spec to whichever sort order meets their own requirements. 
+
+GRID--how to read the Xs
+There is a section in the iLAD specification with indications of the specific included Industry specs and an entry included for each data point row in which the data point may be included.  At this time, there is an "X" if the data point has a Conditionality of Required (R) or Conditionally Required (C or CR) in the AUS request. If the data point is listed in the spec as Optional (O), it will be listed as "O." Inclusion has been measured in this way to put the tools on an "apples-to-apples" footing in measurement.  For this reason, there are some datapoints that have sort ID's for specifications, but not an "X."  This would mean the data point may be used in another type of transaction. If you are looking for just AUS data associated with a particular specification, you can use the X's and O's as a filter.  If you are looking for a more broad analysis, you want to use the UniqueID provided by the Specification. 
+
+The Story on Enumerations
+You will notice that while the iLAD is essentially a spec made from aggregation, there is only one set of enumerations. How did these enumerations come to be?  Each of the native proprietary specifications included their own "allowed" list of enumerations.  In order to create the iLAD list of enumerations, these original lists were combined to create a superset list. The resulting list contains every enumeration used by specifications included in the iLAD dataset. 
+
+Explain the maroon text and the IDs with the extra digits.  Why are these here?
+In the process of rationalizing the native proprietary specifications, and the Arcroles and relationships and how they were documented across the iLAD file, a method was needed to created a standardized way of imputing the Relationship structures across the files.  Although the XML structures are needed in order to code the Arcroles in practice, the native specifications differed greatly in their practice on how and to what extent they documented things like the RELATIONSHIP container structures in their actual mappings. In rationalizing the specs, these structures were imputed across the dataset. In order to preserve sorting order for DU and ULAD users, these structures were added in the DU and ULAD mappings in maroon text, and in the Unique ID's with an additional non-native digit to differentiate them from native records in their original specs. This allows for users to see where these records would land in natural sort and preserves this functionality within the workbook. If you do not desire these observations, they are easily filtered out by removing maroon text from your filter. 

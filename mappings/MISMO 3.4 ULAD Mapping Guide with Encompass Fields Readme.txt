@@ -1,0 +1,19 @@
+Summary:
+
+Documents mapping details to support MISMO 3.4 based data exchange with Freddie Mac Loan Product Advisor (LPA), Fannie Mae Desktop Underwriter (DU), Fannie Mae Desktop Originator, and Fannie Mae EarlyCheck from Encompass.
+
+Details:
+
+View attached file, last updated Dec 04, 2025.
+
+Open the attachment for a copy of the LPA/DU MISMO 3.4 ULAD Mapping Guide.
+
+This guide provides the following information:
+
+LPA DU ULAD Map Merged - This tab contains the full list of fields required to support MISMO 3.4 based data exchange with both Freddie Mac Loan Product Advisor (LPA) and Fannie Mae Desktop Underwriter (DU) from Encompass
+ULAD ArcRoles - Describes the required relationships that must be created between MISMO containers to create MISMO 3.4 formatted file for AUS submission. 
+1003 to URLA Comparison - This tab contains a side by side comparison of the existing Form 1003/65 compared with the new URLA application.  This is limited to the face of the application and is not a comprehensive data guide of all data points being added for URLA, but can be used as a quick reference to show field ID reuse across the application versions as well as the mapping to new fields on the URLA where required to support the new application data structure. 
+Repeatable Fields - Repeatable fields have two types of structures. Repeatable fields within Encompass are virtual data structures that have generic field IDs associated. Field numbering will increase in sequence based on Borrower number and record. The numbering is unique within borrower pairs. The same numbers can exist (i.e., 01) in other pairs. 
+Repeatable fields (Non VOE) [Screen Identifier][Sequence Number][Field ID within Sequence]
+Repeatable fields (VOE) [Borrower Identifier][Screen Identifier][Sequence Number][Field ID within Sequence]
+Where repeatable structures are used in this guide, the sequence number used is 00 to generically identify the field.
