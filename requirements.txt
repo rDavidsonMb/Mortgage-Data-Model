@@ -1,1 +1,20 @@
+# requirements.txt for Mortgage-Data-Model: MISMO 3.4 parsing, DB modeling, and Encompass integration
+# Generated for reproducibility; install with `pip install -r requirements.txt`
+# Core for generator.py: XML schema parsing and validation
+xmlschema==2.5.1  # For loading and parsing MISMO XSDs (e.g., MISMO_3.4.0_B324.xsd)
 
+# Database modeling and DDL generation
+sqlalchemy==2.0.27  # For creating tables/columns (e.g., NUMERIC types for loan amounts)
+
+# Data manipulation: Merging Encompass mappings, CSV/Excel handling
+pandas==2.2.0  # For DataFrames (e.g., reading encompass_data_dictionary.xlsx, merging mappings)
+
+# Excel-specific: Reading/writing Encompass Data Dictionary and generated mappings
+openpyxl==3.1.2  # Engine for pandas Excel I/O; handles large mortgage field lists (~1,000+ rows)
+
+# Standard lib supplements (no need to list: pathlib, json are built-in)
+
+# Optional/Future: ETL for Encompass API/XML ingestion (uncomment as needed)
+# requests==2.31.0  # For Encompass V3 API calls (e.g., Get Loan Schema)
+# lxml==5.1.0  # Faster XML parsing for large MISMO exports (alternative to xmlschema for shredding)
+# psycopg2==2.9.9  # Postgres driver for direct DB loads (if using PostgreSQL backend)
